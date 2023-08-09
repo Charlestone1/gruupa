@@ -87,9 +87,11 @@ const SignUp = () => {
         //     setSuccess(false);
         //   }, 3000);
         })
-        .catch(error => 
+        .catch(error => {
             console.error(error)
-            );
+            setLoading(false);
+        }
+        );
       }
 
     function togglePasswordVisibility() {
