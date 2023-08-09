@@ -9,9 +9,9 @@ const UserMode = () => {
                 <div className='flex items-center justify-center w-[38%] h-full'>
                     <div className='flex justify-center h-full w-72'>
                         <div className='flex flex-col items-center'>
-                            <div className='flex justify-center items-center py-8'>
+                            <div className='flex justify-center items-center pt-2 pb-8'>
                                 <Logo /> 
-                                <h3 className='pl-2 font-semibold'>TeamLink</h3>
+                                <h3 className='pl-2 font-semibold'>TeamUp</h3>
                             </div>
                             <div className='text-center flex flex-col items-center'>
                                 <p className=' text-2xl font-semibold w-[85%]'>Why are you creating this account?</p>
@@ -40,7 +40,7 @@ const UserMode = () => {
                             <Link href='/sign-up' className='w-full'>
                                 <button className='rounded-full bg-primary w-full text-white text-sm h-10 tracking-wide'>Continue</button>
                             </Link>
-                            <p className='py-8 text-gray-400 text-sm font-extralight'>Already have an account? <Link href='/login' className='text-gray-600 font-semibold'>Login</Link> </p>
+                            <p className='py-8 text-gray-400 text-sm font-extralight'>Already have an account? <Link href='/sign-in' className='text-gray-600 font-semibold'>Login</Link> </p>
                         </div>
                     </div>
                 </div>
