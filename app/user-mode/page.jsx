@@ -6,16 +6,16 @@ const UserMode = () => {
     return (
         <section className="md:w-screen md:h-screen flex justify-center items-center">
             <div className='flex items-center justify-center w-full h-full p-3'>
-                <div className='flex items-center justify-center w-[38%] h-full'>
+                <div className='flex items-center justify-center w-[90%] md:w-[38%] h-full'>
                     <div className='flex justify-center h-full w-72'>
                         <div className='flex flex-col items-center'>
                             <div className='flex justify-center items-center pt-2 pb-8'>
                                 <Logo /> 
-                                <h3 className='pl-2 font-semibold'>TeamUp</h3>
+                                <h3 className='pl-2 font-semibold text-lg'>TeamUp</h3>
                             </div>
                             <div className='text-center flex flex-col items-center'>
                                 <p className=' text-2xl font-semibold w-[85%]'>Why are you creating this account?</p>
-                                <p className='text-primary text-xs font-extralight pt-3'>You can always change this in your settings</p>
+                                <p className='text-primary text-sm font-extralight pt-3'>You can always change this in your settings</p>
                             </div>
                             <div className='flex justify-between items-center py-8 w-full'>
                                 <article className='flex items-center justify-center h-32 w-32 bg-primary_lite rounded-md'>
@@ -45,7 +45,7 @@ const UserMode = () => {
                     </div>
                 </div>
 
-                <div className='flex justify-center items-center w-[62%] h-full '>
+                <div className='hidden md:flex justify-center items-center w-[62%] h-full '>
                     <div className=' flex justify-center items-center h-full w-full rounded-l-[70px] bg-primary overflow-hidden'>
                         Image
                     </div>

@@ -1,38 +1,52 @@
 'use client'
-import React, {useState, useEffect} from 'react'
-// import { useUserContext } from '../useContexGlobal/UserContext';
+import React, {useState} from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation';
+
+function getUser(){
+  let user = localStorage.getItem('user'); 
+  if(user){
+      user = JSON.parse(user); 
+  } else {
+      user = null
+  }
+  return user; 
+}
 
 function Dashboard() {
+
+  const [user, setUser] = useState(getUser());
+
+  const navigate = useRouter();
+
+    const handleLogout = () => {
+        localStorage.removeItem('user');
+        setUser(null)
+        navigate.push('/login');
+    }
   
-  // const [firstName, setFirstName] = useState(localStorage.getItem('firstname'));
-  // const [lastName, setLastName] = useState(localStorage.getItem('lastname'));
-  // const [email, setEmail] = useState(localStorage.getItem('email'));
-  // const [token, setToken] = useState(localStorage.getItem('token'));
   
-  // const { user } = useUserContext();
 
 
-
+  
 
   return (
-    // <div className='flex flex-col justify-center items-center bg-primary text-sm'>        
-    //     {token ? ( // Check if userdata is not null
-    //     <>
-    //       <h1 className='text-lg'>Welcome to your Dashboard</h1>
-    //       <h2>Hello {firstName} {lastName}</h2>
-    //       <h3 className='py-2 underline'>User Details</h3>
-    //       <p>First name: {firstName}</p>
-    //       <p>Last name: {lastName}</p>
-    //       <p>Email: {email}</p>
-    //       {/* <p>Login token: {token}</p> */}
-    //     </>
-    //   ) : (
-    //     <p>You are not logged In.</p>
-    //   )}
-    // </div>
-    <div>
-      Welcome to your dashboard
-    </div>
+    <>
+      {user ? (
+        <>
+          <h2>Welcome to your dashboard</h2>
+          <h4>Hello, {user.firstName} {user.lastName}</h4>
+          <h5>{user.email}</h5>
+          <button className='bg-red-500 text-white rounded-md' onClick={handleLogout}>LOGOUT</button>
+        </>
+      ) : (
+        <div className='flex justify-center items-center h-[100vh]'>
+          <p> You are not Logged In </p>
+          <Link href='/sign-in' className='ml-2'><button className='bg-blue-500 text-white rounded-md px-2'>LOGIN</button></Link>
+        </div>
+      )}
+    </>
+
   )
 }
 
