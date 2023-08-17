@@ -9,7 +9,7 @@ import {RiErrorWarningLine} from "react-icons/ri"
 import Link from 'next/link'
 import { useRouter } from 'next/navigation';
 import Loader from '@/components/Loader';
-import { loginUser } from '@/app/redux/features/user/userSlice';
+import { loginUser } from '../redux/features/user/UserSlice';
 
 
 const SignIn = () => {
