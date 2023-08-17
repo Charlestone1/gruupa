@@ -101,23 +101,23 @@ const SignUp = () => {
   return (
     <section className="md:w-screen md:h-screen flex justify-center items-center">
             <div className='flex items-center justify-center w-full h-full p-3'>
-                <div className='flex items-center justify-center w-[38%] h-full'>
+                <div className='flex items-center justify-center w-[90%] md:w-[38%] h-full'>
                     <form onSubmit={handleSubmit} className='flex justify-center h-full w-80'>
                         <div className='flex flex-col items-center w-full '>
                             <div className='grid grid-cols-3 items-center w-full '>
                                 <Link href='/user-mode' className='text-gray-800 text-xl col-span-1'><AiOutlineLeftCircle /></Link>
                                 <div className=' col-span-2 flex justify-start items-center pt-2 pb-3'>
                                     <Logo /> 
-                                    <h3 className='pl-2 font-semibold'>TeamUp</h3>
+                                    <h3 className='pl-2 font-semibold text-lg'>TeamUp</h3>
                                 </div>
                             </div>
                             <div className='text-center flex flex-col items-center'>
                                 <p className=' text-2xl font-semibold'>Create your account</p>
-                                <p className='text-primary text-xs font-extralight pt-1'>Fill in your details in the fields provided</p>
+                                <p className='text-primary text-sm font-extralight pt-1'>Fill in your details in the fields provided</p>
                             </div>
                             <div className='flex flex-col justify-between items-center py-5 w-full'>
                                 <div className='w-full'>
-                                    <label htmlFor="firstName" className="block mb-1 text-xs font-semibold text-[#241E4E] ">First Name </label>
+                                    <label htmlFor="firstName" className="block mb-1 text-sm font-semibold text-[#241E4E] ">First Name </label>
                                     <div className='relative'>  
                                         <input 
                                             type="text" 
@@ -127,14 +127,14 @@ const SignUp = () => {
                                             required
                                             value={formData.firstName} 
                                             onChange={handleChange} 
-                                            className="bg-gray-50 border border-gray-400 outline-1 outline-[#A396FF] text-[#241E4E] sm:text-sm rounded-full focus:ring-[#A396FF] focus:border-[#A396FF] block w-full h-9 pl-8 bg-transparent "/>
+                                            className="bg-gray-50 border border-gray-400 outline-1 outline-[#A396FF] text-[#241E4E] sm:text-sm rounded-full focus:ring-[#A396FF] focus:border-[#A396FF] block w-full h-10 pl-8 bg-transparent "/>
                                             <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
                                                 <HiOutlineUserCircle />
                                             </span>
                                     </div>
                                 </div>
                                 <div className='w-full py-3'>
-                                    <label htmlFor="lastName" className="block mb-1 text-xs font-semibold text-[#241E4E] ">Last Name </label>
+                                    <label htmlFor="lastName" className="block mb-1 text-sm font-semibold text-[#241E4E] ">Last Name </label>
                                     <div className='relative'>
                                         <input 
                                             type="text" 
@@ -144,7 +144,7 @@ const SignUp = () => {
                                             required
                                             value={formData.lastName} 
                                             onChange={handleChange} 
-                                            className="bg-gray-50 border border-gray-400 outline-1 outline-[#A396FF] text-[#241E4E] sm:text-sm rounded-full focus:ring-[#A396FF] focus:border-[#A396FF] block w-full h-9 pl-8 bg-transparent "/>
+                                            className="bg-gray-50 border border-gray-400 outline-1 outline-[#A396FF] text-[#241E4E] sm:text-sm rounded-full focus:ring-[#A396FF] focus:border-[#A396FF] block w-full h-10 pl-8 bg-transparent "/>
                                             <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
                                                 <HiOutlineUserCircle />
                                             </span>
@@ -152,7 +152,7 @@ const SignUp = () => {
                                 </div>
 
                                 <div className='w-full'>
-                                    <label htmlFor="email" className="block mb-1 text-xs font-semibold text-[#241E4E] ">Email </label>
+                                    <label htmlFor="email" className="block mb-1 text-sm font-semibold text-[#241E4E] ">Email </label>
                                     <div className='relative'>
                                         <input 
                                             type="email" 
@@ -163,7 +163,7 @@ const SignUp = () => {
                                             required
                                             value={formData.email} 
                                             onChange={handleChange} 
-                                            className="bg-gray-50 border border-gray-400 outline-1 outline-[#A396FF] text-gray-800 sm:text-sm rounded-full focus:ring-[#A396FF] focus:border-[#A396FF] block w-full h-9 pl-8 bg-transparent "/>
+                                            className="bg-gray-50 border border-gray-400 outline-1 outline-[#A396FF] text-gray-800 sm:text-sm rounded-full focus:ring-[#A396FF] focus:border-[#A396FF] block w-full h-10 pl-8 bg-transparent "/>
                                             <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
                                                 <HiOutlineMail />
                                             </span>
@@ -171,7 +171,7 @@ const SignUp = () => {
                                 </div>
 
                                 <div className='w-full py-3'>
-                                    <label htmlFor="password" className="block mb-1 text-xs font-semibold text-gray-900 ">Password </label>
+                                    <label htmlFor="password" className="block mb-1 text-sm font-semibold text-gray-900 ">Password </label>
                                     <div className="relative">
                                         <input 
                                             type={isPasswordVisible ? "text" : "password"}
@@ -185,7 +185,7 @@ const SignUp = () => {
                                             onChange={handleChange}
                                             pattern="^.{8,}$"
                                             title="Password must be at least 8 characters long."
-                                            className="bg-gray-50 border border-gray-400 text-gray-800 sm:text-sm rounded-full focus:ring-primary focus:border-primary block w-full h-9 pl-8 bg-transparent" />
+                                            className="bg-gray-50 border border-gray-400 text-gray-800 sm:text-sm rounded-full focus:ring-primary focus:border-primary block w-full h-10 pl-8 bg-transparent" />
                                             <span className="absolute inset-y-0 right-0 flex items-center px-4 text-gray-600"
                                             onClick={togglePasswordVisibility}>
                                             {isPasswordVisible ? <MdOutlineVisibility /> : <MdOutlineVisibilityOff />}
@@ -229,12 +229,12 @@ const SignUp = () => {
                                 : "Continue"}
                                 </button>
                             </span>
-                            <p className='pt-3 text-gray-400 text-xs font-extralight'>Already have an account? <Link href='/sign-in' className='text-gray-600 font-semibold'>Login</Link> </p>
+                            <p className='pt-3 text-gray-400 text-sm font-extralight'>Already have an account? <Link href='/sign-in' className='text-gray-600 font-semibold'>Login</Link> </p>
                         </div>
                     </form>
                 </div>
 
-                <div className='flex justify-center items-center w-[62%] h-full '>
+                <div className='hidden md:flex justify-center items-center w-[62%] h-full'>
                     <div className=' flex justify-center items-center h-full w-full rounded-l-[70px] bg-primary overflow-hidden'>
                         Image
                     </div>

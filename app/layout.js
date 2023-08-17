@@ -1,8 +1,8 @@
 import './globals.css'
 // import { Inter } from 'next/font/google'
 import { Open_Sans } from 'next/font/google'
-// import { Providers } from './globalState/provider'
-import { UserProvider } from './useContexGlobal/UserContext'
+import ReduxProvider from './redux/ReduxProvider'
+// import { UserProvider } from './useContexGlobal/UserContext'
 
 // const inter = Inter({ subsets: ['latin'] })
 const open_sans = Open_Sans({ subsets: ['latin'] })
@@ -16,11 +16,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={open_sans.className}>
-        {/* <Providers> */}
-        <UserProvider>
+        <ReduxProvider>
           {children}
-        </UserProvider>
-        {/* </Providers> */}
+        </ReduxProvider>
       </body>
     </html>
   )
